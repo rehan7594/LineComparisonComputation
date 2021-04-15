@@ -18,7 +18,7 @@ public class LineComparisonComputation {
 		System.out.println("Enter the value of y2: ");
 		double y2=s.nextDouble();
 		double dist1=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-		String s1=String.valueOf(dist1);
+		
 		
 		//Distance between two points for line2
 		System.out.println("Enter the value of x3: ");
@@ -30,13 +30,16 @@ public class LineComparisonComputation {
 		System.out.println("Enter the value of y4: ");
 		double y4=s.nextDouble();
 		double dist2=Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
-		String s2=String.valueOf(dist2);
 		
-		//System.out.println(s1.equals(s2));
-		if (s1.equals(s2))
-			System.out.println("Both the lines are equal");
-		else
-			System.out.println("Both the lines are not equal");
+		if (Double.compare(dist1, dist2) > 0) 
+		      System.out.println("The length dist1 is greater than length dist2");
+		   
+		else if (Double.compare(dist1, dist2) < 0) 
+		     System.out.println("The length dist1 is less than length dist2");
+		   
+		else 
+		     System.out.println("The length dist1 is equal to length dist2");
+		
 		
 	}
 
